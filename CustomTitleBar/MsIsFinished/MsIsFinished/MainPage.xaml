@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="MsIsFinished.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MsIsFinished"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Background="SteelBlue" Grid.Row="0" Height="32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" x:Name="GridTitleBar" Background="Transparent">
+                <TextBlock Text="A quick brown fox jumped over the lazy doge." VerticalAlignment="Center" FontSize="12" FontFamily="Segoe UI" FontWeight="Normal" Margin="10,0" Foreground="White"/>
+            </Grid>
+            <TextBox Grid.Column="1" x:Name="TxtSearchBox" Width="180" BorderThickness="1" BorderBrush="LightGray" PlaceholderText="Quick Launch (Ctrl+Q)" MinHeight="20" Height="27" FontSize="12" Margin="0,0,140,0"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" VerticalAlignment="Center" Source="Assets/78a66a6djw8egznwkazz6j20dc0dc75a.jpg" Height="256" />
+            <TextBlock Grid.Column="1" x:Name="TxtMessage" TextWrapping="Wrap" />
+        </Grid>
+    </Grid>
+</Page>
